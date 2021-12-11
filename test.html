@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>React App</title>
+  </head>
+  <body>
+    <script>
+      const a = [1, 2, 3];
+      const b = [...a];
+      console.log('1. ========= 스프레드 연산자');
+      b.push(4);
+      console.log(`a의 값은 : ${a}`);
+      console.log(`b의 값은 : ${b}`);
+      const a2 = [1, 2, 3];
+      const b2 = a2.concat(4);
+      console.log(`a의 값은 : ${a2}`);
+      console.log(`b의 값은 : ${b2}`);
+      const a3 = [1, 2, 3];
+      const b3 = a3.filter((n) => {
+        return n != 1;
+      }); //boolean을 리턴 받는다. -> true만 걸러낸다.
+      console.log(`a의 값은 : ${a3}`);
+      console.log(`b의 값은 : ${b3}`);
+
+      const a4 = [1, 2, 3];
+      const b4 = a4.slice(0, 2); //[1,2]
+      const c4 = [...a4.slice(0, 2)]; //[1,2]
+      console.log(`a의 값은 : ${a4}`);
+      console.log(`b의 값은 : ${b4}`);
+
+      const a5 = [1, 2, 3];
+      const b5 = a5.map((n) => n);
+      const c5 = a5.map((n) => n + 10);
+    </script>
+  </body>
+</html>
