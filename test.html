@@ -33,6 +33,16 @@
       const a5 = [1, 2, 3];
       const b5 = a5.map((n) => n);
       const c5 = a5.map((n) => n + 10);
+      const user = [
+        { id: 1, name: '시기', age: 20 },
+        { id: 2, name: '러브', age: 20 },
+      ];
+      const userChange = { id: 1, age: 30 };
+      const newUser = user.map((n) =>
+        n.id === userChange.id ? { ...user, ...userChange } : n,
+      );
+      console.log(user);
+      console.log(newUser);
     </script>
   </body>
 </html>
