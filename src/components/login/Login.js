@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const loginList = styled.div`
-  padding: 30px 0 30px 0;
+  ##padding: 30px 0 30px 0;
 `;
 
 const Login = () => {

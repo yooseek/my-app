@@ -1,18 +1,17 @@
+import { Route } from 'react-router-dom';
 import './App.css';
-import styled from 'styled-components';
-import Footer from './components/Footer';
 import Header from './components/Header';
+import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
-`;
 function App() {
   return (
     <div>
-      <LoginPage></LoginPage>
+      <Header />
+      <Route path="/" exact={true} component={HomePage} />
+      <Route path="/login/:id" exact={true} component={LoginPage} />
+      <Footer />
     </div>
   );
 }
